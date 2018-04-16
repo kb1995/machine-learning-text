@@ -1,0 +1,18 @@
+.trainingBox{
+    border: 5px solid black;
+    margin: 1em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.trainingTextB{
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+}
+
+.trainingTextW{
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}

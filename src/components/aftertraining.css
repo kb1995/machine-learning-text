@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-areas:
+    "color text"
+    "reset reset";
+  justify-items: center;
+}
+
+.colorPicker {
+  grid-area: color;
+  margin-top: 3em;
+}
+
+.background {
+  grid-area: text;
+  border: 0.1em solid black;
+  margin: 3em;
+  padding: 3em;
+}
+
+.reset {
+  grid-area: reset;
+}
+
+.text {
+  font-size: 1.5em;
+}
