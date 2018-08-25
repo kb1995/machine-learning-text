@@ -7,6 +7,23 @@
   width: 60%;
 }
 
+
+.App *{
+  text-align: center;
+}
+
+.example-box{
+  background-color:#00ff00;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 0px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.trained-enough{
+  display: block;
+  margin: 0 auto;
+}
+
 .branding{
   position: fixed;
   bottom: 10px;
@@ -15,4 +32,11 @@
 
 .branding p{
   font-size: 12px;
+}
+
+
+@media screen and (max-width: 760px) {
+  .App {
+    width: 90%;
+  }
 }

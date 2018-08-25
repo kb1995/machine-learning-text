@@ -1,11 +1,11 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .colorPicker {
-  margin-right: 25px;
+  margin: 0 25px 0 0;
 }
 
 .background {
@@ -13,10 +13,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  align-self: stretch;
 }
 
 .text {
-  font-size: 28px;
   text-align: center;
 }
 
@@ -24,4 +25,14 @@
     display: flex;
     justify-content: center;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .colorPicker {
+    margin: 0 0 25px 0;
+  }
 }

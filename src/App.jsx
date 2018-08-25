@@ -8,34 +8,18 @@ import { hot } from "react-hot-loader";
 const network = new brain.NeuralNetwork();
 
 const script_intro = [
-  <h1>
-    Help this poor program succeed in its task using Machine Learning and Neural
-    Network
-  </h1>,
   <div>
-    The goal is to teach the program to automatically adjust the color of the
+    The goal is to teach the machine to automatically adjust the color of the
     text on a given background.
   </div>,
   <div>
     <p>For Example:</p>
-    <div
-      style={{
-        backgroundColor: "#00ff00",
-        margin: "1em",
-        padding: "1em"
-      }}
-    >
+    <div className="example-box">
       <p style={{ fontWeight: "bold", fontSize: "1em", color: "white" }}>
         This is bad
       </p>
     </div>
-    <div
-      style={{
-        backgroundColor: "#00ff00",
-        margin: "1em",
-        padding: "1em"
-      }}
-    >
+    <div className="example-box">
       <p style={{ fontWeight: "bold", fontSize: "1em", color: "black" }}>
         This is better
       </p>
@@ -43,7 +27,7 @@ const script_intro = [
   </div>,
   <div>
     <p>Let's begin by training some data.</p>
-    <p>Remember, the program will be just as good as you make it.</p>
+    <p>Remember, the machine will be just as good as you make it.</p>
   </div>,
   <div>
     <p>Click on the rectangle with the better visible text.</p>
@@ -188,9 +172,11 @@ class App extends Component {
               counter={this.state.counter_training}
               data={colorData}
             />
-            <button className="btn btn-primary" onClick={this.endOfTraining}>
-              Click if you trained enough!
-            </button>
+            <div>
+              <button className="trained-enough btn btn-primary" onClick={this.endOfTraining}>
+                Enough training!
+              </button>
+            </div>
           </div>
           <div className="branding"><p>Created by <a href="https://twitter.com/kris_bogdanov" target="no_blank">Kris Bogdanov</a></p></div>
 

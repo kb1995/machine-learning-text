@@ -26,7 +26,7 @@ export default class AfterTraining extends Component {
               style={{ color: result === "dark" ? "white" : "black" }}
             >
               Can you see me?
-              Change the color in the color picker
+              Change the color in the picker
             </p>
           </div>
         </div>
