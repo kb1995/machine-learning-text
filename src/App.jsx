@@ -8,15 +8,15 @@ import { hot } from "react-hot-loader";
 const network = new brain.NeuralNetwork();
 
 const script_intro = [
-  <h1 className="centerText">
+  <h1>
     Help this poor program succeed in its task using Machine Learning and Neural
     Network
   </h1>,
-  <div className="centerText">
+  <div>
     The goal is to teach the program to automatically adjust the color of the
     text on a given background.
   </div>,
-  <div className="centerText">
+  <div>
     <p>For Example:</p>
     <div
       style={{
@@ -41,11 +41,11 @@ const script_intro = [
       </p>
     </div>
   </div>,
-  <div className="centerText">
+  <div>
     <p>Let's begin by training some data.</p>
     <p>Remember, the program will be just as good as you make it.</p>
   </div>,
-  <div className="centerText">
+  <div>
     <p>Click on the rectangle with the better visible text.</p>
     <p>
       Usually 6-7 examples are enough, but try as many or as few as you want.
@@ -162,16 +162,15 @@ class App extends Component {
     // intro
     if (this.state.counter !== script_intro.length) {
       return (
+        <React.Fragment>
         <div
           className="App"
-          style={{
-            padding: "3em",
-            cursor: "pointer"
-          }}
           onClick={() => this.setState({ counter: this.state.counter + 1 })}
         >
           {script_intro[this.state.counter]}
         </div>
+        <div className="branding"><p>Created by <a href="https://twitter.com/kris_bogdanov" target="no_blank">Kris Bogdanov</a></p></div>
+        </React.Fragment>
       );
     }
     // training session
@@ -180,32 +179,40 @@ class App extends Component {
       this.state.counter_training !== colorData.length
     ) {
       return (
-        <div className="App">
-          <Training
-            color={this.state.color}
-            addToDataWHITE={this.addToDataWHITE}
-            addToDataBLACK={this.addToDataBLACK}
-            counter={this.state.counter_training}
-            data={colorData}
-          />
-          <button className="btn btn-primary" onClick={this.endOfTraining}>
-            Click if you trained enough!
-          </button>
-        </div>
+        <React.Fragment>
+          <div className="App">
+            <Training
+              color={this.state.color}
+              addToDataWHITE={this.addToDataWHITE}
+              addToDataBLACK={this.addToDataBLACK}
+              counter={this.state.counter_training}
+              data={colorData}
+            />
+            <button className="btn btn-primary" onClick={this.endOfTraining}>
+              Click if you trained enough!
+            </button>
+          </div>
+          <div className="branding"><p>Created by <a href="https://twitter.com/kris_bogdanov" target="no_blank">Kris Bogdanov</a></p></div>
+
+        </React.Fragment>
       );
     } else {
       this.EndOfArrayExamples();
     }
     // after training
     return (
-      <div className="App">
-        <AfterTraining
-          color={this.state.color}
-          handleChange={this.handleChange}
-          result={result}
-          handleReset={this.handleReset}
-        />
-      </div>
+      <React.Fragment>
+        <div className="App">
+          <AfterTraining
+            color={this.state.color}
+            handleChange={this.handleChange}
+            result={result}
+            handleReset={this.handleReset}
+          />
+        </div>
+        <div className="branding"><p>Created by <a href="https://twitter.com/kris_bogdanov" target="no_blank">Kris Bogdanov</a></p></div>
+          
+      </React.Fragment>
     );
   }
 }

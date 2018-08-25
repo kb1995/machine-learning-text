@@ -17,7 +17,7 @@ export default class Training extends Component {
             backgroundColor: data[counter]
           }}
         >
-          <p className="trainingTextB">This is text!</p>
+          <p className="trainingTextB">Which do you see better?</p>
         </div>
         <div
           className="trainingBox"
@@ -26,7 +26,7 @@ export default class Training extends Component {
             backgroundColor: data[counter]
           }}
         >
-          <p className="trainingTextW">This is text!</p>
+          <p className="trainingTextW">Which do you see better?</p>
         </div>
       </div>
     );

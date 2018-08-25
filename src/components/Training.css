@@ -1,18 +1,22 @@
 .trainingBox{
-    border: 5px solid black;
-    margin: 1em;
-    padding: 1em;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 0px;
 }
 
 .trainingTextB{
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1em;
     color: black;
+
+    text-align: center;
+    padding: 15px 0;
 }
 
 .trainingTextW{
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1em;
     color: white;
+
+    text-align: center;
+    padding: 15px 0;
 }

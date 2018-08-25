@@ -1,16 +1,18 @@
 .App {
-  text-align: center;
-  position: absolute;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  top: 25%;
-  border: 3px solid black;
+  box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px 0px;
+
+  cursor: pointer;
+  padding: 25px;
+
+  width: 60%;
 }
 
-.centerText{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); 
+.branding{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
 }
 
+.branding p{
+  font-size: 12px;
+}

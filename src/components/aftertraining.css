@@ -1,28 +1,27 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-areas:
-    "color text"
-    "reset reset";
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .colorPicker {
-  grid-area: color;
-  margin-top: 3em;
+  margin-right: 25px;
 }
 
 .background {
-  grid-area: text;
-  border: 0.1em solid black;
-  margin: 3em;
-  padding: 3em;
-}
-
-.reset {
-  grid-area: reset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text {
-  font-size: 1.5em;
+  font-size: 28px;
+  text-align: center;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
